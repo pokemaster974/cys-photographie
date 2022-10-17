@@ -1,4 +1,4 @@
-baseURL: https://cys-photographie.netlify.app # todo: change site url.
+baseURL: https://cys-photographie.github.io # todo: change site url.
 title: Site web personnel de CYS Photographie # todo: change site name.
 defaultContentLanguage: fr
 theme: eternity
