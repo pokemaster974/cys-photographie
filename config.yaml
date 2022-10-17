@@ -2,7 +2,7 @@ baseURL: https://cys-photographie.netlify.app # todo: change site url.
 title: Site web personnel de CYS Photographie # todo: change site name.
 defaultContentLanguage: fr
 theme: eternity
-# googleAnalytics: 'G-4MELPRKZ3X' # todo: set your analytics id.
+# googleAnalytics: '' # todo: set your analytics id.
 
 params:
 #  image: /images/banner.png
