@@ -1,0 +1,35 @@
+<div class="center">
+    <div class="slide-meta columns is-mobile">
+        {{ $tags := .ctx.Params.tags }}
+        {{ if $tags }}
+            <div class="center column slide-meta-el">
+                <div class="slide-tags">
+                    {{ range $i, $tag := $tags }}
+                        {{ if and (ne $tag "bienvenue") (ne $tag "archive") }}
+                            <a class="grey" href={{ printf "tags/%s" $tag | absURL }}>#{{ $tag }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+
+        {{ if not .ctx.Params.hideDate }}
+            {{ if .ctx.Params.Date }}
+                <div class="center column slide-meta-el grey">
+                    <p>{{ .ctx.Page.Date.Format "2 January 2006" }}</p>
+                </div>
+            {{ else }}
+                {{ with (index $.imgs 0).Exif }}
+                    {{ with .Date }}
+                        <div class="center column slide-meta-el grey">
+                            <p>{{ .Format "2 January 2006" }}</p>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+
+<!--Localisation en français du format de la date et changement work par bienvenue-->

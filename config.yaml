@@ -1,0 +1,153 @@
+baseURL: https://cys-photographie.netlify.app # todo: change site url.
+title: Site web personnel de CYS Photographie # todo: change site name.
+defaultContentLanguage: fr
+theme: eternity
+# googleAnalytics: 'G-4MELPRKZ3X' # todo: set your analytics id.
+
+params:
+#  image: /images/banner.png
+  subtitle: Présentation de collections de photographies réalisées par CYS Photographie. # todo: change default subtitle for your website.
+  copyright: Tous droits réservés. # todo: set your copyright type.
+  author: CYS Photographie # todo: set your full name.
+  description: Vous trouverez différentes collections de photographies réalisées dans le cadre de collaborations pour les portraits ou à titre de loisir pour les autres photos.
+  dontShowSource: false # please, do not do this :)
+  columns: 3
+  portfolio:
+    columns:
+      desktop:
+        default: 4
+        portraits: 3
+        bordeaux: 3
+        la-reunion: 3
+        nature: 4
+        aerien: 4
+        parcs-zoos: 4
+        archive: 6
+      mobile:
+        default: 3
+        portraits: 2
+        bordeaux: 2
+        la-reunion: 2
+        nature: 2
+        aerien: 2
+        parcs-zoos: 3
+        archive: 3
+  socials:
+    # todo: change these links.
+    - icon: 'far fa-envelope fa-lg'
+      url: 'mailto:cys.photographie@gmail.com'
+      landing: true
+#    - icon: 'fab fa-github fa-lg'
+#      url: 'https://github.com/boratanrikulu/eternity'
+#      landing: true
+    - icon: 'fab fa-instagram fa-lg'
+      url: 'https://www.instagram.com/cys.photographie/'
+      landing: true
+    - icon: 'fa-brands fa-square-facebook'
+      url: 'https://www.facebook.com/CYS.Photographie/'
+      landing: true
+#    - icon: 'fab fa-linkedin-in fa-lg'
+#      url: 'https://linkedin.bora.sh/in/eternity'
+  homepage: "/bienvenue" # homepage link, mostly same with menu.main[0]
+  bypassWelcomePage: true
+  timeZone: "Europe/Paris"
+  date_format: "2 January 2006"
+  title: Site web personnel de CYS Photographie
+  sitename: "Site web personnel de CYS Photographie"
+  facebook: "https://www.facebook.com/CYS.Photographie/"
+#  twitter: "@cys.photographie"
+#  og_image: "/images/og.png"
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: tags
+  series: series
+
+permalinks:
+  bienvenue: ":filename/"
+
+menu:
+  main:
+    - name: Bienvenue
+      url: /bienvenue/
+      weight: 1
+    - name: Portraits
+      url: /tags/portraits/
+      weight: 2
+    - name: Nature
+      url: /tags/nature/
+      weight: 3
+    - name: La Réunion
+      url: /tags/la-reunion/
+      weight: 3
+    - name: Bordeaux
+      url: /tags/bordeaux/
+      weight: 3
+    - name: Aérien
+      url: /tags/aerien/
+      weight: 4
+    - name: Parcs & Zoos
+      url: /tags/parcs-zoos/
+      weight: 4
+    - name: Archive
+      url: /tags/archive/
+      weight: 5
+    - name: Tags
+      url: /tags/
+      weight: 6
+    - name: À propos
+      url: /about/
+      weight: 7
+    - name: Nouveautés
+      url: /nouveautes/
+      weight: 8
+
+imaging:
+  exif:
+    includeFields: ""
+    excludeFields: ".*"
+
+enableEmoji: true
+enableRobotsTXT: true
+canonifyURLs: false
+# rssLimit: 100
+author:
+  name: CYS Photographie
+copyright: Tous droits réservés.
+languageCode: fr-fr
+
+related:
+  includeNewer: true
+  indices:
+  - name: date
+    weight: 60
+  - name: tags
+    weight: 80
+  - name: title
+    weight: 80
+  - name: description
+    weight: 60
+  threshold: 0
+  toLower: false
+
+enableGitInfo: false
+frontmatter:
+  date:
+  - date
+  - publishDate
+  - lastmod
+  expiryDate:
+  - expiryDate
+  lastmod:
+  - :git
+  - lastmod
+  - date
+  - publishDate
+  publishDate:
+  - publishDate
+  - date

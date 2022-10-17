@@ -1,0 +1,16 @@
+<div class="center hidden-menu">
+    {{ $IsNavbarPage := false }}
+    {{ $currentPage := .Title }}
+    {{ range $i, $el := .Site.Menus.main }}
+        {{ if eq $currentPage $el.Name }}
+            {{ if not $IsNavbarPage }}
+                {{ $IsNavbarPage = true }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    {{ if not $IsNavbarPage }}
+        <p>Page de #{{ $currentPage }}</p>
+    {{ end }}
+</div>
+
+<!--Modification pour ajout d'une explication de la page présentée-->

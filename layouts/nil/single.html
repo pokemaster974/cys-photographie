@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="">
+                <div class="header-404">
+                    <img src="/idontknow.png" alt="" width="25%" height="25%">
+                </div>
+                <div class="body-404">
+                    <p class="subtitle-404">Page non trouvée</p>
+                    <p class="title-404">404</p>
+                    Mais voici une liste des 5 dernières publications sur le site :
+                    <br />
+                    <br />
+                    {{ range $section, $taxonomy := .Site.Sections }}
+                        <ul>
+                            {{ range first 5 $taxonomy.Pages.ByPublishDate.Reverse }}
+                            <li>- <a href="{{ .Permalink}}"> {{ .LinkTitle }} (<span class="date">{{ .Date.Format "2 January 2006" }}</span>)</a></li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                    <br />
+                    <a href="{{ .Site.BaseURL }}">Retour à la case départ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ partial "footer.html" . }}
+
+<!--Suppression de la référence à l'image eternity.png et localisation française de la page-->
