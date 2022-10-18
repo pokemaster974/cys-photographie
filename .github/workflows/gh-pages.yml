@@ -21,7 +21,10 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+          googleAnalytics: ${{ secrets.HUGO_GOOGLEANALYTICS }}
           # extended: true
+        env: # Or as an environment variable
+          HUGO_GOOGLEANALYTICS: ${{ secrets.HUGO_GOOGLEANALYTICS }}
 
       - name: Build
         run: hugo --minify
@@ -31,4 +34,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          googleAnalytics: ${{ secrets.HUGO_GOOGLEANALYTICS }}
           publish_dir: ./public
+        env: # Or as an environment variable
+          HUGO_GOOGLEANALYTICS: ${{ secrets.HUGO_GOOGLEANALYTICS }}
