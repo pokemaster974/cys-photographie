@@ -50,6 +50,8 @@ params:
 #      url: 'https://linkedin.bora.sh/in/eternity'
   homepage: "/bienvenue" # homepage link, mostly same with menu.main[0]
   bypassWelcomePage: true
+  disableRadius: true
+  plausible: '' # todo: set your plausible id.
   timeZone: "Europe/Paris"
   date_format: "2 January 2006"
   title: Site web personnel de CYS Photographie
