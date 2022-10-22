@@ -20,21 +20,17 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
-          googleAnalytics: ${{ secrets.HUGO_GOOGLEANALYTICS }}
+          hugo-version: '0.104.3'
           # extended: true
-        env: # Or as an environment variable
-          HUGO_GOOGLEANALYTICS: ${{ secrets.HUGO_GOOGLEANALYTICS }}
 
       - name: Build
-        run: hugo --minify
+        run: hugo --gc --minify
+        env: # Or as an environment variable
+          HUGO_GOOGLEANALYTICS: ${{ secrets.HUGO_GOOGLEANALYTICS }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          googleAnalytics: ${{ secrets.HUGO_GOOGLEANALYTICS }}
           publish_dir: ./public
-        env: # Or as an environment variable
-          HUGO_GOOGLEANALYTICS: ${{ secrets.HUGO_GOOGLEANALYTICS }}
