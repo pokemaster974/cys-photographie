@@ -55,6 +55,7 @@ params:
   bypassWelcomePage: true
   disableRadius: true
   plausible: '' # todo: set your plausible id.
+  moveIt: false # Moves Title and Meta info down, only visible when scroll.
   timeZone: "Europe/Paris"
   date_format: "2 January 2006"
   title: Site web personnel de CYS Photographie
