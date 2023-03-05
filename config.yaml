@@ -56,6 +56,7 @@ params:
     - bienvenue
     - archive
   bypassWelcomePage: true
+  disableWelcomePageBackground: false
   disableRadius: true
   plausible: '' # todo: set your plausible id.
   moveIt: false # Moves Title and Meta info down, only visible when scroll.
