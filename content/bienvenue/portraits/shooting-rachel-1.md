@@ -1,6 +1,6 @@
 ---
-weight: 30
-tags_weight: 30
+weight: 20
+tags_weight: 20
 images:
 - /images/portraits/CYS_0250_.jpg
 multipleColumn: false
