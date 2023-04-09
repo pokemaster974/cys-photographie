@@ -6,6 +6,7 @@ theme: eternity
 
 params:
 #  image: /images/banner.png
+  logo: logo.png
   subtitle: Présentation de collections de photographies réalisées par CYS Photographie. # todo: change default subtitle for your website.
   copyright: Tous droits réservés. # todo: set your copyright type.
   author: CYS Photographie # todo: set your full name.

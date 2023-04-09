@@ -406,9 +406,3 @@ section .column img {
         margin-top: 0;
     }
 }
-
-/* Paramètres ajoutés */
-
-.new-list {
-     padding-left: 3px;
-}
